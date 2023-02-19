@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>WatergazingSpot</defName>
+    <label>watergazing spot</label>
+    <thingClass>WatergazingSpot.WatergazingSpot</thingClass>
+    <description>A spot from which pawns can just relax and watch the water. Place on a bridge next to water.</description>
+    <graphicData>
+      <texPath>WatergazingSpot</texPath>
+      <shaderType>MetaOverlay</shaderType>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawOffsetSouth>(0, 0, 1)</drawOffsetSouth>
+      <drawOffsetWest>(1, 0, 0)</drawOffsetWest>
+      <drawOffsetNorth>(0, 0, -1)</drawOffsetNorth>
+      <drawOffsetEast>(-1, 0, 0)</drawOffsetEast>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+    </statBases>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Rare</tickerType>
+    <terrainAffordanceNeeded Inherit="False" />
+    <useHitPoints>False</useHitPoints>
+    <designationCategory>Joy</designationCategory>
+    <passability>Standable</passability>
+    <canOverlapZones>true</canOverlapZones>
+    <hasInteractionCell>True</hasInteractionCell>
+    <comps>
+      <li Class="CompProperties_Forbiddable">
+        <allowNonPlayer>true</allowNonPlayer>
+      </li>
+    </comps>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+      <ai_chillDestination>false</ai_chillDestination>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+    </building>
+    <placeWorkers>
+      <li>WatergazingSpot.PlaceWorker_WatergazingSpot</li>
+    </placeWorkers>
+  </ThingDef>
+</Defs>
