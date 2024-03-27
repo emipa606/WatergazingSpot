@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Verse;
 
 namespace WatergazingSpot;
@@ -8,7 +7,7 @@ public class PlaceWorker_WatergazingSpot : PlaceWorker
 {
     public override void DrawGhost(ThingDef def, IntVec3 center, Rot4 rot, Color ghostCol, Thing thing = null)
     {
-        GenDraw.DrawFieldEdges(new List<IntVec3> { center + IntVec3.South.RotatedBy(rot) });
+        GenDraw.DrawFieldEdges([center + IntVec3.South.RotatedBy(rot)]);
     }
 
     public override AcceptanceReport AllowsPlacing(BuildableDef checkingDef, IntVec3 loc, Rot4 rot, Map map,
