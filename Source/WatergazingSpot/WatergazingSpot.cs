@@ -8,22 +8,18 @@ public class WatergazingSpot : Building
     {
         base.TickRare();
         var lookingSpotTerrain = Map.terrainGrid.TerrainAt(Position + IntVec3.South.RotatedBy(Rotation));
-        if (!lookingSpotTerrain.defName.Contains("Water") && !lookingSpotTerrain.defName.Contains("Marsh") &&
-            !lookingSpotTerrain.defName.Contains("Ice"))
+        if (!lookingSpotTerrain.IsWater && !lookingSpotTerrain.IsIce)
         {
             Destroy();
             return;
         }
 
         var standingSpotTerrain = Map.terrainGrid.TerrainAt(Position);
-        if (!standingSpotTerrain.defName.Contains("Water") && !standingSpotTerrain.defName.Contains("Marsh"))
+        if (!standingSpotTerrain.IsWater || standingSpotTerrain.defName.Contains("Bridge"))
         {
             return;
         }
 
-        if (!standingSpotTerrain.defName.Contains("Bridge"))
-        {
-            Destroy();
-        }
+        Destroy();
     }
 }

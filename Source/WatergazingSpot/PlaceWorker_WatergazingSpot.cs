@@ -20,13 +20,13 @@ public class PlaceWorker_WatergazingSpot : PlaceWorker
         }
 
         var lookingSpotTerrain = map.terrainGrid.TerrainAt(lookingSpot);
-        if (!lookingSpotTerrain.defName.Contains("Water") && !lookingSpotTerrain.defName.Contains("Marsh"))
+        if (!lookingSpotTerrain.IsWater && !lookingSpotTerrain.IsIce)
         {
             return new AcceptanceReport("WatergazingSpot.OnWater".Translate());
         }
 
         var standingSpotTerrain = map.terrainGrid.TerrainAt(loc);
-        if (!standingSpotTerrain.defName.Contains("Water") && !standingSpotTerrain.defName.Contains("Marsh"))
+        if (!standingSpotTerrain.IsWater)
         {
             return true;
         }

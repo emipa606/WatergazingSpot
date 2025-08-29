@@ -3,11 +3,17 @@
   "CanAdd": "0",
   "CanRemove": "2",
   "PreviewVersion": "1.6",
-  "LastXmlCleaning": "2025-06-22T21:23:50.7857484+02:00",
+  "LastXmlCleaning": "2025-08-29T20:30:38.2422267+02:00",
   "SocialImageSet": true,
   "FundingSet": true,
   "SearchTags": [
     " meditation",
     " bridges"
-  ]
+  ],
+  "Patches": false,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 3879,
+  "LinesOfXML": 2710,
+  "CodeBaseSize": 60
 }
